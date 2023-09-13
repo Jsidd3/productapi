@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{7CC546A6-FCAA-4197-A9E9-4247C240B13E}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.mycartnow.productapi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+    <Files>
+      <File FileName="Controllers/ProductController.cs" Line="29" Column="1" />
+      <File FileName="Model/ProductRequest.cs" />
+      <File FileName="Model/ProductResponse.cs" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Providers/ProductProvider.cs" Line="18" Column="6" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Repository/ProductRepository.cs" Line="36" Column="6" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="EmptyTextFile.txt" Line="11" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="mycartnow.productapi" expanded="True">
+            <Node name="SQL" expanded="True" />
+            <Node name="mycartnow.productapi">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Providers" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,10 @@
+﻿CREATE DATABASE Product;
+
+CREATE TABLE Products (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(255) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL
+    -- Add other columns as needed
+);
+
+DROP TABLE Products;
