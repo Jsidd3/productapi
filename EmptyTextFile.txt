@@ -1,4 +1,4 @@
-﻿CREATE DATABASE Product;
+﻿--CREATE DATABASE Product;
 
 CREATE TABLE Products (
     Id INT IDENTITY(1,1) PRIMARY KEY,
@@ -7,4 +7,4 @@ CREATE TABLE Products (
     -- Add other columns as needed
 );
 
-DROP TABLE Products;
+--DROP TABLE Products;

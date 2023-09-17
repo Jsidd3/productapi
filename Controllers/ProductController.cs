@@ -2,6 +2,7 @@
 using System;
 using System.Threading.Tasks;
 using mycartnow.productapi.Repository;
+using mycartnow.productapi.Providers;
 
 namespace ProductController.Controllers
 {
@@ -9,14 +10,15 @@ namespace ProductController.Controllers
     [Route("api/products")]
     public class ProductController : ControllerBase
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductProvider _productProvider;
 
-        public ProductController(IProductRepository productRepository)
+        public ProductController(IProductProvider productProvider)
         {
-            _productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
+            _productProvider = productProvider ?? throw new ArgumentNullException(nameof(productProvider));
         }
 
         [HttpPost]
+        [Route("CreateProduct")]
         public async Task<IActionResult> CreateProduct(ProductRequest product)
         {
             if (product == null)
@@ -24,16 +26,15 @@ namespace ProductController.Controllers
                 return BadRequest();
             }
 
-            var productId = await _productRepository.CreateProductAsync(product);
-            product.Id = productId;
-
-            return Ok(product); // Return the product with a 200 OK status.
+            var productId = await _productProvider.InsertProductAsync(product);
+            return Ok(productId);
         }
 
         [HttpGet]
-        public async Task<IActionResult> ListProducts()
+        [Route("ListOfProducts")]
+        public async Task<IActionResult> ListOfProducts()
         {
-            var products = await _productRepository.GetAllProductsAsync();
+            var products = await _productProvider.GetAllProductsAsync();
             return Ok(products);
         }
     }

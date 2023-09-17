@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="../build/mycartnow.productapi.props" />
+  <Import Project="..\build\mycartnow.productapi.props" />
 </Project>
